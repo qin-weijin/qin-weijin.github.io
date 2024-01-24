@@ -1,28 +1,26 @@
-# Note 开发笔记
+# Development Notes
 
-Description: 学习过程中整理的前端开发笔记。
+## Front-end Basis
 
-## Development Process 开发流程
+参考网站：[Mozilla](https://developer.mozilla.org/)
 
-- [产品需求文档 PRD](https://keepenthusiasmlearning.github.io/note/development-process/PRD.html)
-- [前端开发文档](https://keepenthusiasmlearning.github.io/note/development-process/front-end-document.html)
-- [自测、提测、前后端联调](/)
-- [打包和部署](/)
+- HTML
+- JavaScript
+    + TypeScript
+- Css
+    +  Sass
+    +  Less
 
-## Basis
+## Vue
 
-- [Vue](https://keepenthusiasmlearning.github.io/note/basis-vue/index.html)
-- [HTML](/)
-- [JavaScript TypeScript](/)
-- [CSS SASS LESS](/)
+## UI Library
 
-## Utility 工具
+- Vuetify
+- Ant Design Vue
+- Element UI
+- Vant
 
-- [Axure 产品需求文档](/)
-- [Marterial Design 设计系统](/)
-- [NodeJS 跨平台的 Javascript 运行环境](/)
-
-### [Github 版本控制系统](https://keepenthusiasmlearning.github.io/note/utility-github/index.html)
+## [Git & Github](https://keepenthusiasmlearning.github.io/note/utility-github/index.html)
 
 - [Introduction 简介](https://keepenthusiasmlearning.github.io/note/utility-github/introduction.html)
 - [Basis Command 基本指令](https://keepenthusiasmlearning.github.io/note/utility-github/basis-command.html)
@@ -31,16 +29,25 @@ Description: 学习过程中整理的前端开发笔记。
 - [Inspection、Comparison and Patching 检查、比较和修补](https://keepenthusiasmlearning.github.io/note/utility-github/inspection-comparison-patching.html)
 - [Other Command 其他指令](https://keepenthusiasmlearning.github.io/note/utility-github/other-command.html)
 
-## UI 库
+## [NodeJS](/)
 
-- [Vant](/)
-- [Vuetify](/)
+跨平台的 Javascript 运行环境。
 
-## 组件库
+- NPM
 
-- [Swiper 轮播图](/)
-- [VideoJS 富媒体](/)
 
-## 附件
 
-- [开发环境搭建](https://keepenthusiasmlearning.github.io/note/附件.开发环境搭建.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
