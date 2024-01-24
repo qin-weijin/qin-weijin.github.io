@@ -23,20 +23,14 @@
 	}
 
 ## 自定义标签
-
-例： 自定义 <myHero> 标签
-
-	<style>
-		myHero {
-    		display: block;
-    		background-color: #ddd;
-    		padding: 50px;
-    		font-size: 30px;
-		} 
-	</style>
-	<body>
-		<myHero>My First Hero</myHero>
-	</body>
+```
+<customTag></customTag>
+<style>
+  .customTag
+    display: block;
+    background-color: #ddd;
+</style>
+```
 
 ## Head 标签书写规范
 
