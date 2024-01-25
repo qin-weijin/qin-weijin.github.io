@@ -20,7 +20,7 @@
 - Element UI
 - Vant
 
-## [Git & Github]()
+## Git & Github
 
 - [Introduction 简介](https://keepenthusiasmlearning.github.io/development-notes/git_and_github/Introduction.html)
 
