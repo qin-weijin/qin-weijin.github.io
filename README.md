@@ -1,10 +1,10 @@
 # Development Notes
 
-## Front-end Basis
+## Basis
 
 参考网站：[Mozilla](https://developer.mozilla.org/)
 
-- HTML
+- [HTML](https://keepenthusiasmlearning.github.io/development-notes/HTML.html)
 - JavaScript
     + TypeScript
 - Css
