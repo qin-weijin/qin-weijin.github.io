@@ -1,36 +1,4 @@
-# 基础
-
-## HTML5 新特性
-
-- 语义化标签
-- 新的标签属性
-- 新的输入类型，即 `<input type="">`
-- 新的文档类型（DOCTYPE）声明：`<!DOCTYPE html>`
-- 新的字符编码（charset）声明：`<meta charset="UTF-8">`，默认的字符编码：UTF-8
-- 新表单控件：`<datalist>`, `<keygen>`, `<output>`
-- 新的属性语法：双引号, 单引号, 不带引号和 props 写法。
-- 新图像支持：`<canvas>`, `<svg>`
-- 多媒体支持：`<video>`, `<audio>`, `<embed>`, `<source>`, `<track>`
-- 新的 API：本地存储
-- 删除部分元素
-
-详见：[https://www.w3school.com.cn/html/html5_new_elements.asp](https://www.w3school.com.cn/html/html5_new_elements.asp "https://www.w3school.com.cn/html/html5_new_elements.asp")
-
-**将新的语义化标签定义为块元素以兼容旧预览器**
-
-	header, section, footer, aside, nav, main, article, figure {
-    	display: block;
-	}
-
-## 自定义标签
-```
-<customTag></customTag>
-<style>
-  .customTag
-    display: block;
-    background-color: #ddd;
-</style>
-```
+# HTML
 
 ## Head 标签书写规范
 
