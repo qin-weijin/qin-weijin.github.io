@@ -13,6 +13,14 @@
 
 ## Vue
 
+**Feature**
+
+- 声明式渲染，无需直接操作 DOM。
+- 双向绑定，数据变化实时更新视图。
+- 单文件组件，整合代码实现模块化。
+
+**About**
+
 - [响应式原理](https://keepenthusiasmlearning.github.io/development-notes/vue/reactivity-philosophy.html)
 - [Vue Router](https://keepenthusiasmlearning.github.io/development-notes/vue/router.html)
 
