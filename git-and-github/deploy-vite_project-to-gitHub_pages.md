@@ -85,12 +85,6 @@ dist
 ```
 **运行命令上传项目**
 
-    $ git init
-    $ git remote add origin https://github.com/<USERNAME>/<REPO>.git
-    $ git branch -M main
-    $ git add .
-    $ git commit -m "description"
-    $ git push -u origin main
     $ npm run build
     $ npm run deploy
 
