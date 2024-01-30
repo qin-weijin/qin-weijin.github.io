@@ -4,6 +4,7 @@
 
 - SFC 可以通过文件名调用自身。
 - SFC 内部组件引用。 `<components.name>`
+
 ```
 <Form.Input>
 	<Form.Label><Form.Label>
@@ -11,6 +12,7 @@
 ```
 
 **SFC setup 中 API 应用**
+
 ```
 const props = defineProps({ name: "VApp" })			// props 定义
 
@@ -48,6 +50,7 @@ inject(key, defaultValue, treatDefaultAsctory)	// 注入
 **样式模块引用**
 
 样式模块通过 `mod.[class]` 或 `useCssModule('mod')` 引用。
+
 ```
 <div class="$style.header"></div>
 <style module="mod">
@@ -66,6 +69,7 @@ inject(key, defaultValue, treatDefaultAsctory)	// 注入
 **CSS 中的 `v-bind()`**
 
 在 CSS 中使用 `v-bind()` 将数据和样式绑定在一起，使样式可试实时响应数据变化。
+
 ```
 <script setup>
 	const theme = { 
