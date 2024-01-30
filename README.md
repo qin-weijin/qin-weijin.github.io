@@ -13,9 +13,6 @@
 
 ## Vue
 
-- [单文件组件 SFC](/)
-- [Vue Router](https://keepenthusiasmlearning.github.io/development-notes/vue/router.html)
-
 **[Guide](/)**
 
 - 声明式、模板语法
@@ -37,6 +34,10 @@
 - 内置组件: 、`<Teleport>`、`<Suspense>`
 - 插槽
 - 内置指令
+
+- [单文件组件 SFC](/)
+- [Vue Router API](https://keepenthusiasmlearning.github.io/development-notes/vue/router.html)
+- [Vue Router Guards](/)
 
 ## UI Library
 
