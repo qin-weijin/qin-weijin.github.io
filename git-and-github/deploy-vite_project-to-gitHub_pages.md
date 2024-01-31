@@ -4,7 +4,6 @@
 - 构建代码储存到 gh-pages 分支。`$ npm run build`
 - 项目源码储存到 main 分支。
 - 修改路由入口使其匹配仓库。 `path: '/<REPO>'`
-- 修改 Mockjs 配置使项目可通过 Axios 正常访问模拟数据。
 
 **修改项目入口 `vite.config.ts`**
 ```ts
@@ -24,34 +23,6 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-})
-```
-
-**Mockjs 文件目录**
-
-mock-prod-server.ts 文件必须位于 src 文件路径。
-```
-./my-project
-|- mock
-|   └- mock_data              - 定义模拟数据
-└- src
-    └- mock-prod-server.ts    - 调用 createProdMockServer 创建模拟数据
-```
-
-**配置在生产环境应用 Mockjs `vite.config.ts`**
-```ts
-export default defineConfig({
-  plugins: [
-    viteMockServe({
-        mockPath: 'mock',     // mock 入口
-        localEnabled: true,   // 监听 mockPath 变化
-        prodEnabled: true,    // prod 环境下使用 mock
-        injectCode: ` 
-          import { setupProdMockServer } from './mock-prod-server';
-          setupProdMockServer();
-        `            
-    })
-  ],
 })
 ```
 
