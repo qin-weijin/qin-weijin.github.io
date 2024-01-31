@@ -17,11 +17,11 @@
 **useLink 暴露路由链接方法**
 ```javascript
 const {
-	route,                    - 解析的路由对象
-	herf,                     - 链接中的 ref
-	isActive,                 - 当前链接是否被匹配
-	isExactActive,            - 当前链接是否被严格匹配
-	navigate,                 - 导航到该链接的函数
+  route,                    - 解析的路由对象
+  herf,                     - 链接中的 ref
+  isActive,                 - 当前链接是否被匹配
+  isExactActive,            - 当前链接是否被严格匹配
+  navigate,                 - 导航到该链接的函数
 } = useLink()
 ```
 v-slot 可访问所有 useLink 返回的值。
@@ -112,7 +112,7 @@ v-slot 可访问所有 useLink 返回的值。
 在 `router options` 中或使用 `router.addRoute()` 时的路由记录类型。
 
 - `path` - String，路由地址。`/`
-- `redirect` - String | Location | Function，重定向路由地址。
+- `redirect` - `String | Location | Function`，重定向路由地址。
 - `name` - 路由名
 - `alias` - 别名
 - `children` - 路由嵌套

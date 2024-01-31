@@ -25,7 +25,7 @@ const pRef = ref()
 ## 动态组件
 ```html
 <KeepAlive>
-	<component :is=""></component>
+  <component :is=""></component>
 </KeepAlive>
 ```
 **`<KeepAlive>`**
@@ -91,11 +91,11 @@ const pRef = ref()
 
 **在子组件中定义插槽**
 
-		<slot name="slotname" :prop="value"></slot>
+	<slot name="slotname" :prop="value"></slot>
 
 **在父中应用插槽**
 
-		<template v-slot:slotname="propObj">...<template>
+	<template v-slot:slotname="propObj">...<template>
 
 **作用域插槽**
 

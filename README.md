@@ -37,9 +37,12 @@
 
 ## Git & Github
 
-- [Introduction 简介](https://keepenthusiasmlearning.github.io/development-notes/git-and-github/Introduction.html)
-- [Deploy Vite + Vue Project to GitHub Pages](https://keepenthusiasmlearning.github.io/development-notes/git-and-github/deploy-vite_project-to-gitHub_pages.html)
+- [Introduction 简介](https://keepenthusiasmlearning.github.io/development-notes/git-and-github/Introduction)
+- [将 Vue 项目部署到 GitHub Pages](https://keepenthusiasmlearning.github.io/development-notes/git-and-github/deploy-vite_project-to-gitHub_pages)
 
+## Utils
+
+- [Axios](https://keepenthusiasmlearning.github.io/development-notes/utils/axios)
 
 ## UI Library
 

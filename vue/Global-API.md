@@ -74,13 +74,13 @@
 
 install 方法定义插件注入 Vue 的组件、指令、资源、全局方法与全局属性。
 ```javascript
-const = myPlugin = {
-	install(app, options) {
-		app.component();
-		app.directive();
-		app.provide();
-		app.config.globalProperties.$[methods | attribute]
-	}
+const myPlugin = {
+  install(app, options) {
+    app.component();
+    app.directive();  
+    app.provide();
+    app.config.globalProperties.$[methods | attribute]
+  }
 }
 ```
 ## 依赖"供给"与"注入"
