@@ -1,25 +1,18 @@
 # 单文件组件
 
 单文件组件(即 `*.vue` 文件 Single-File Component，简称 SFC) 使我们能够将 Vue 组件的模板、逻辑和样式封装在单个文件中。
+SFC 可通过文件名引用自身，还可通过 `<Form.Input>` 形式引用内部组件。
 
-- SFC 可以通过文件名调用自身。
-- SFC 内部组件引用。`<Form.Input>`、`<Form.Label`
-
-**SFC setup 中 API 应用**
-```
-const props = defineProps({ name: "VApp" })     - props 定义
-
-const emits = defineEmits(['change', 'delete']) - 定义事件
-
-const attrs = useAttrs()                        - 定义透传属性
-
-const slots = useSlots()                        - 定义插槽
-
-defineExpose({a, b})  - 显式地指定（暴露）能被父组件访问的属性和函数
-
-provide(key, value)                             - 提供
-
-inject(key, defaultValue, treatDefaultAsctory)  - 注入
+**单文件组件中的 API 使用**
+```javascript
+import {defineProps, defineEmits, useAttrs, useSlots, defineExpose, provide, inject} from 'vue'
+const props = defineProps({ name: "VApp" })
+const emits = defineEmits(['change', 'delete'])
+const attrs = useAttrs()
+const slots = useSlots()
+defineExpose({a, b})	// 显式地指定（暴露）能被父组件访问的属性和函数
+provide(key, value)
+inject(key, defaultValue, treatDefaultAsctory)
 ```
 **SFC 语言块**
 
@@ -46,9 +39,10 @@ inject(key, defaultValue, treatDefaultAsctory)  - 注入
 ```
 <div class="$style.header"></div>
 <style module="mod">
-  .header
+  .header {
     color: red,
     background: yellow
+  }
 <style>
 ```
 
