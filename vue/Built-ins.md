@@ -16,7 +16,7 @@ const pRef = ref()
 
 在外壳组件中，根据不同状态显示不同的真实组件，称为**动态组件**。
 
-		<component :is="vue:my-row-component"><>
+	<component :is="vue:my-row-component"><>
 
 **key**
 
@@ -40,11 +40,9 @@ const pRef = ref()
 
 作为动态组件的外壳，不会渲染而是被代替。
 
-## 过渡组件
+## 过渡组件 `<Transition>`
 
 不会渲染 DOM
-
-		<Transition mode="out-in" enter-from-class="enterClass">...</Transition>
 
 **Props**
 
@@ -55,9 +53,9 @@ const pRef = ref()
 - `mode` - `out-in`、`in-out`、`default` - 指定"旧元素先过渡 out"、还是"新元素先过渡 in"
 - `appear` - 是否初始渲染时过渡
 - 指定在过渡的不同阶段应用的类。（进入时、过渡时、离开时）
-		- `enterFromClass`, `enterActiveClass`, `enterToClass`, 
-		- `appearFromClass`, `appearActiveClass`, `appearToClass`, 
-		- `leaveFromClass`, `leaveActiveClass`, `leaveToClass`
+	+ `enterFromClass`, `enterActiveClass`, `enterToClass`, 
+	+ `appearFromClass`, `appearActiveClass`, `appearToClass`, 
+	+ `leaveFromClass`, `leaveActiveClass`, `leaveToClass`
 
 **事件**
 
@@ -65,7 +63,7 @@ const pRef = ref()
 - `@appear`, `@after-appear`, `@appear-cancelled`
 - `@before-leave`, `@leave`, `@after-leave`, `@leave-cancelled`
 
-**TransitionGroup 过渡组**
+**过渡组 `<TransitionGroup>`**
 
 为一组元素指定过渡，它们必须包含独立的 `key` 属性。
 
@@ -75,23 +73,17 @@ const pRef = ref()
 
 ## 内置组件
 
-**Teleport**
+**传送门 `<Teleport>`**
 
-传送门，用于把逻辑上关联但表现上分离的组件部分显示在其他位置。
+用于把逻辑上关联但表现上分离的组件部分显示在其他位置。如：点击一个 `<button>` 需要在 `<body>` 显示一个模态框 `</model>`
+
+	<button @click="open = true">Open Model<button>
+	<Teleport to="body">I im Model!</Teleport>
 
 - `to` - 传送目标，CSS 选择器、实际元素或 HTMLElement
 - `disabled` - Boolean，提供打开和关闭传送的选项。
 
-如：点击一个 `<button>` 需要在 `<body>` 显示一个模态框 `</model>`
-```
-	<button @click="open = true">Open Model<button>
-
-	<Teleport to="body">
-		<div> I im Model!</div>
-	</Teleport>
-```
-
-**Suspense**
+**`<Suspense>`**
 
 用于等待内部的所有异步组件加载完成时一同显示。
 
