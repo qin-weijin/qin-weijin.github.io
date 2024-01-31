@@ -6,10 +6,12 @@ SFC 可通过文件名引用自身，还可通过 `<Form.Input>` 形式引用内
 **单文件组件中的 API 使用**
 ```javascript
 import {defineProps, defineEmits, useAttrs, useSlots, defineExpose, provide, inject} from 'vue'
+
 const props = defineProps({ name: "VApp" })
 const emits = defineEmits(['change', 'delete'])
 const attrs = useAttrs()
 const slots = useSlots()
+
 defineExpose({a, b})	// 显式地指定（暴露）能被父组件访问的属性和函数
 provide(key, value)
 inject(key, defaultValue, treatDefaultAsctory)

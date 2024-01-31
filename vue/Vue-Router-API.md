@@ -8,25 +8,25 @@
 
 **useRouter 返回路由器实例**
 
-		const router = useRouter(): Router
+	const router = useRouter(): Router
 
 **useRoute 返回当前路由地址**	
 
-		const route = useRoute(): RouteLocationNormalizedLoaded
+	const route = useRoute(): RouteLocationNormalizedLoaded
 
 **useLink 暴露路由链接方法**
-
-		const {
-			route,                    - 解析的路由对象
-			herf,                     - 链接中的 ref
-			isActive,                 - 当前链接是否被匹配
-			isExactActive,            - 当前链接是否被严格匹配
-			navigate,                 - 导航到该链接的函数
-		} = useLink()
-
+```javascript
+const {
+	route,                    - 解析的路由对象
+	herf,                     - 链接中的 ref
+	isActive,                 - 当前链接是否被匹配
+	isExactActive,            - 当前链接是否被严格匹配
+	navigate,                 - 导航到该链接的函数
+} = useLink()
+```
 v-slot 可访问所有 useLink 返回的值。
 
-		<router-link v-slot='{ useLink }'>
+	<router-link v-slot='{ useLink }'>
 
 ## Interfaces Router 路由实例
 
@@ -58,17 +58,17 @@ v-slot 可访问所有 useLink 返回的值。
 
 **RouterViewProps 路由显示选项**
 
-		name: String
-		route: RouteLocationNormalized
+	name: String
+	route: RouteLocationNormalized
 
 **RouterLinkProps 路由链接选项**
 
-		to: RouteLocationRaw
-		replace: Boolean           - replace or push
-		activeClass: String		
-		ariaCurrentValue:          - 激活时传递的值 "location" | "time" | "page" | "step" | "date" | "true" | "false" 
-		custom: Boolean            - 渲染为 <slot> 而非 <a>
-		exactActiveClass: String   - 精准匹配时的类
+	to: RouteLocationRaw
+	replace: Boolean           - replace or push
+	activeClass: String		
+	ariaCurrentValue:          - 激活时传递的值 "location" | "time" | "page" | "step" | "date" | "true" | "false" 
+	custom: Boolean            - 渲染为 <slot> 而非 <a>
+	exactActiveClass: String   - 精准匹配时的类
 
 **RouterOptions 原始配置对象**
 

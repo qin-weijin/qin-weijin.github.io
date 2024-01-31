@@ -6,18 +6,14 @@
 - 修改路由入口使其匹配仓库。 `path: '/<REPO>'`
 - 修改 Mockjs 配置使项目可通过 Axios 正常访问模拟数据。
 
-**修改项目入口**
-```  
-<!-- vite.config.ts -->
-
+**修改项目入口 `vite.config.ts`**
+```ts
 export default defineConfig({
   base: "/<REPO>/",
 })
 ```
-**修改路由入口**
-```
-<!-- router/index.ts -->
-
+**修改路由入口 `./router/index.ts`**
+``` ts
 import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
@@ -42,10 +38,8 @@ mock-prod-server.ts 文件必须位于 src 文件路径。
     └- mock-prod-server.ts    - 调用 createProdMockServer 创建模拟数据
 ```
 
-**配置在生产环境应用 Mockjs**
-```  
-<!-- vite.config.ts -->
-
+**配置在生产环境应用 Mockjs `vite.config.ts`**
+```ts
 export default defineConfig({
   plugins: [
     viteMockServe({
@@ -61,10 +55,8 @@ export default defineConfig({
 })
 ```
 
-**配置上传 github main 时忽略构建文件**
+**配置上传忽略文件 `.gitignore`**
 ```
-<!-- .gitignore -->
-
 node_modules
 dist
 ...
@@ -73,10 +65,8 @@ dist
 
     $ npm install gh-pages --save-dev
 
-**配置到命令行**
-```
-<!-- packjson.json -->
-
+**配置到命令行 `packjson.json`**
+```json
 {
   "scripts": {
     "deploy": "gh-pages -d dist -r https://github.com/<USERNAME>/<REPO>.git -b gh-pages"    

@@ -73,16 +73,16 @@
 插件是能够添加全局功能的代码块，它必须作为或提供 install() 方法给 Vue 调用并安装。 
 
 install 方法定义插件注入 Vue 的组件、指令、资源、全局方法与全局属性。
-
-	const = myPlugin = {
-		install(app, options) {
-			app.component();
-			app.directive();
-			app.provide();
-			app.config.globalProperties.$[methods | attribute]
-		}
+```javascript
+const = myPlugin = {
+	install(app, options) {
+		app.component();
+		app.directive();
+		app.provide();
+		app.config.globalProperties.$[methods | attribute]
 	}
-
+}
+```
 ## 依赖"供给"与"注入"
 
 在 Vue 根实例"供给"一个值，它的所有组件实例都可以通过 inject 调用。（全局供给）

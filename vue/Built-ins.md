@@ -23,11 +23,11 @@ const pRef = ref()
 循环渲染中作为子组件的唯一键。
 
 ## 动态组件
-
-	<KeepAlive>
-		<component :is=""></component>
-	</KeepAlive>
-
+```html
+<KeepAlive>
+	<component :is=""></component>
+</KeepAlive>
+```
 **`<KeepAlive>`**
 
 保留动态组件的所有项。`:is`、`v-if`
@@ -76,10 +76,10 @@ const pRef = ref()
 **传送门 `<Teleport>`**
 
 用于把逻辑上关联但表现上分离的组件部分显示在其他位置。如：点击一个 `<button>` 需要在 `<body>` 显示一个模态框 `</model>`
-
-	<button @click="open = true">Open Model<button>
-	<Teleport to="body">I im Model!</Teleport>
-
+```html
+<button @click="open = true">Open Model<button>
+<Teleport to="body">I im Model!</Teleport>
+```
 - `to` - 传送目标，CSS 选择器、实际元素或 HTMLElement
 - `disabled` - Boolean，提供打开和关闭传送的选项。
 

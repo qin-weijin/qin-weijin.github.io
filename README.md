@@ -4,7 +4,7 @@
 
 参考网站：[Mozilla](https://developer.mozilla.org/)
 
-- [HTML](https://keepenthusiasmlearning.github.io/development-notes/basis/HTML.html)
+- [HTML](https://keepenthusiasmlearning.github.io/development-notes/basis/HTML)
 - JavaScript
     + TypeScript
 - Css
@@ -13,12 +13,12 @@
 
 ## Vue
 
-**[Guide](/)**
+- [响应式原理与声明式语法](https://keepenthusiasmlearning.github.io/development-notes/vue/basis)
+- [单文件组件 SFC](https://keepenthusiasmlearning.github.io/development-notes/vue/Single-File-Component)
+- [Vue Router API](https://keepenthusiasmlearning.github.io/development-notes/vue/Vue-Router-API)
+- [Vue Router Guards](https://keepenthusiasmlearning.github.io/development-notes/vue/Vue-Router-Guards)
 
-- 声明式、模板语法
-- 响应式原理
-
-**[全局 API](/)**
+**[全局 API](https://keepenthusiasmlearning.github.io/development-notes/vue/Global-API)**
 
 - 安装插件 `app.use()`
 - 依赖"供给"与"注入" `provide`、`inject`
@@ -26,7 +26,7 @@
 - 自定义指令 `app.directive()`
 - 创建实例、挂载实例、等待更新、版本和配置对象、类型提示、异步组件定义、自定义元素类...
 
-[**内置内容**](/)
+[**内置 API**](https://keepenthusiasmlearning.github.io/development-notes/vue/Built-ins)
 
 - 特殊属性: ref、is、key
 - 动态组件 `<KeepAlive>`、`<component>`
@@ -35,9 +35,11 @@
 - 插槽
 - 内置指令
 
-- [单文件组件 SFC](/)
-- [Vue Router API](https://keepenthusiasmlearning.github.io/development-notes/vue/router.html)
-- [Vue Router Guards](/)
+## Git & Github
+
+- [Introduction 简介](https://keepenthusiasmlearning.github.io/development-notes/git-and-github/Introduction.html)
+- [Deploy Vite + Vue Project to GitHub Pages](https://keepenthusiasmlearning.github.io/development-notes/git-and-github/deploy-vite_project-to-gitHub_pages.html)
+
 
 ## UI Library
 
@@ -46,10 +48,6 @@
 - Element UI
 - Vant
 
-## Git & Github
-
-- [Introduction 简介](https://keepenthusiasmlearning.github.io/development-notes/git-and-github/Introduction.html)
-- [Deploy Vite + Vue Project to GitHub Pages](https://keepenthusiasmlearning.github.io/development-notes/git-and-github/deploy-vite_project-to-gitHub_pages.html)
 
 ## [NodeJS](/)
 

@@ -9,7 +9,7 @@
 
 **简明的文档类型和字符编码声明**
 
-```
+```html
 <!DOCTYPE html>
 <meta charset="UTF-8">
 ```
