@@ -1,0 +1,128 @@
+
+// 指令
+
+	$ npm install stylus -g 					// 安装
+
+	$ stylus [options|commands] < [infile] > [outfile|dir]
+
+		< 	 									// 输入 别名 in
+		> 										// 输出 别名 out
+		
+	// options|commands
+
+		help <prop>							// 帮助
+		-u, --use <path>					// 调用插件
+		-i, --interactive      				// 启动 node 调试
+		-w, --watch           			  	// 启动热重载
+		-o, --out <dir>         			// 输出
+		-C, --css <src> [dest]  			// 转换 CSS 为 stylus
+		-I, --include <path>  			  	// 添加查找路径
+		-c, --compress      			    // 输出压缩CSS
+		-d, --compare        			  	// 显示输入输出
+		-f, --firebug        			   	// 显示错误和调试
+		-l, --line-numbers    			 	// 显示备注
+		-V, --version       			    // 显示版本号
+		-h, --help         			    	// 显示帮助
+	
+	$variable = val1 val2					// 定义变量 多个值使用索引访问 variable[n]	
+	$obj = (key1 val1) (key2 val2)			// 定义对象
+
+	@property								// @ 访问属性值
+
+// 函数 
+	arguments 								// 参数局部变量
+
+	func(arg1,arg2=5)						// 定义函数 传入默认值
+		return arg1 + arg2					// 可选 return 关键字
+		arg1 arg2                			// 多返回值 索引访问 func()[n]
+		
+	body 		
+		padding func(10px, 5)				// 调用函数		
+
+// 混合书写 mixins
+	arguments 								// 参数局部变量
+	
+	border-radius(arg)						// propertyName(arg)
+		-webkit-border-radius arg
+	  
+	p
+		border-radius 1px 2px / 3px 4px		// 调用 mixins
+
+	div
+		border-radius(5px)					// 可选 带括号
+	
+// 条件
+
+	if some
+		true
+		false
+		
+	if some
+		true
+	else 
+		false
+		
+	unless some								// 除非 相当于 if(!some)
+	
+	return yes if expr						// 二元用法 expr 成立 执行"左边表达式"
+	
+// 迭代
+
+	for [name] in a b c						// 定义 for
+		[property] [name]					// 调用 for
+
+		=> 	property a
+			property b
+			property c				
+			
+	[variable] = a b c 						// 定义被迭代变量
+	for [name],[i] in [variable]			// 迭代 variable 到 name 和 索引i
+		[property] [i] [name]				// 调用
+
+		=> 	property 1 a
+			property 2 d
+			property 3 c
+
+// 导入文件 url() JavaScript API
+
+	@import "file.css|styl"
+	var stylus = require('../')				// 导入目录中所有 styl
+	.import('path')							// 调用时导入	
+
+	stylus(str)
+		.set('filename', __dirname + '/css/test.styl')
+		.define('url', stylus.url({ paths: [__dirname + '/public'],limit: "大小默认限制" }))
+		.render(function(err, css){});
+
+		.define(name,callback) 				// name 调用 callback
+		stylus.url()						// 调用这个url
+
+/*
+	选择器
+	变量
+	插值
+	运算符
+	混合书写
+	方法
+	关键字参数
+	内置方法
+	其余参数
+	注释
+	条件
+	迭代
+	@import									导入外部文件
+	@media 									媒体查询
+	@font-face								导入字体
+	@keyframes								关键帧
+	@extend [selector]						继承
+	url()
+	@css{} 									括号内容当作css解析
+	CSS样式解析
+	字符转码
+	可执行性
+	错误报告
+	连接中间件
+	自检API
+	JavaScript API
+	Nib下CSS扩展
+*/

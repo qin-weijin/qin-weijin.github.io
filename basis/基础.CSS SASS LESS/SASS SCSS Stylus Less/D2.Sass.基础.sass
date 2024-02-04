@@ -1,0 +1,77 @@
+
+	$ npm install -g sass					// sass 格式转换包
+	$ sass my.sass my.css 					// 转换命令
+
+// =============================================================================================
+
+	$ 										// 变量声明
+	!default 								// 默认声明
+	& 										// 父选择器
+	[selFather] >	[selChild]				// 选择器 第一个子
+	[sel1] + [sel2]							// 选择器 后一个同级 sel2
+	[sel1] ~ [sel2] 						// 选择器 同级的所有 sel2
+	%foo									// 占位符选择器 类似id class 只用 @extend 调用
+	#{} 									// 插值 选择器 属性名 
+
+	// 选择器嵌套 属性嵌套 ","群组选择嵌套
+	.selFather 
+		.selCh1,.selCh2 property: val
+
+// =============================================================================================
+
+	@import 								// 外部文件以下划线开头 "_"
+	@-Rules 								// 指令
+	@media
+	@at-root
+	@warn
+
+	// 继承 
+	@extend [selector]
+
+	// 函数
+	@function func($arg){}					
+
+	@if [condition] {expr} 					// 当 condition true 执行 expr
+	@for $var from [num] through [num]		// 遍历 num1到num2 $var代表该过程的变量 
+	@for $var from [start] to [end]			// 不包含 end
+	@each $key,$value in $list				// 遍历执行$list
+	@while [condition] {}					// 循环直到 condition 为 false
+
+// 输出格式
+
+	nested									// 嵌套
+	expanded 								// 手写的CSS
+	compact									// 单行压缩
+	compressed								// 完全压缩
+
+// =============================================================================================
+
+	// 定义混合器,别名 =
+	// $component 参数，代入 v-application
+	// @content 写入@include内容
+	// using ($material) 重载，代表调用两次分别代表 -light 和 -dark
+	@mixin theme($component)
+		.dark.#{$component}
+			@content($material-light)		
+		.light.#{$component}
+			@content($material-dark)			 					
+
+	// 别名 +
+	@include theme(v-application) using ($material)							
+		background: map-get($material, "background")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

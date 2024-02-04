@@ -7,9 +7,20 @@
 - [HTML](https://keepenthusiasmlearning.github.io/development-notes/basis/HTML)
 - JavaScript
 	+ TypeScript
-- Css
-	+  Sass
-	+  Less
+
+**CSS 层叠样式表**
+
+- [CSS 选择器、伪元素、伪类速查表](https://keepenthusiasmlearning.github.io/development-notes/basis/CSS-Selectors)
+
+- Modules & Properties 模块与属性
+- Function 样式函数
+- Type 值类型
+
+
+- At-rules @规则
+	+ `@media` 媒体查询与设备兼容
+
+- 布局
 
 ## Vue
 

@@ -1,0 +1,62 @@
+.flex-box
+
+	display: flex inline-flex
+	// 复合属性
+	flex-flow: [flex-direction] [flex-wrap]
+	// 主轴方向
+	flex-direction: row row-reverse column column-reverse
+	// 换行方式
+	flex-wrap: nowrap wrap wrap-reverse initial inherit
+	// 水平对齐方式
+	justify-content: flex-start flex-end center space-between space-around
+	// 垂直对齐方式
+	align-items: flex-start flex-end center baseline stretch     
+	// 多行对齐方式
+	align-content: flex-start flex-end center space-between |space-around stretch
+
+.flex-childrens
+	// 排列序号
+	order: [num]
+	// 副轴对齐方式
+	align-self: auto stretch center flex-start flex-end baseline
+
+	flex: [flex-grow] [flex-shrink] [flex-basis]
+	// 只允许缩小，等同于 flex: 0 1 auto
+	flex: initial
+	// 允许缩放，等同于 flex: 1 1 auto
+	flex: auto
+	// 禁止缩放，等同于 flex: 0 0 auto
+	flex: none
+	// 禁止缩小，指定放大倍数，等同于 flex: Number 0 auto
+	flex: [num]
+	// 多余空间放大份额
+	flex-grow: [num]
+	// 不足空间缩小份额
+	flex-shrink: [num]
+	// 缩放基准值，auto 以元素宽高为基准
+	flex-basis: auto [num] [%] [rem] [px] 	
+
+/** 
+*
+* 计算实际尺寸
+*
+* 实际尺寸 = 基准空间 + (剩余空间 * 缩放值)
+* 缩放值 = 放大/缩小份额 ÷ 总份额
+*
+* 
+* 
+* 其他布局
+* 
+* Grid 
+* Table
+* Ruby
+* 
+**/
+
+
+
+
+
+
+
+

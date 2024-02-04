@@ -1,0 +1,13 @@
+.father{
+	text-align: center;		/* 水平居中行内元素 inline horizontally */
+}
+
+margin: auto
+vertical-align: middle /*垂直居中 inline*/
+line-height 			/*谁知居中文字*/
+
+影子元素 负margin ::before
+
+/* 居中百分比宽高的元素 */
+position 
+translate(-50%,-50%)

@@ -1,0 +1,107 @@
+String 									// 字符串索引 1 开始
+
+	quote(string)						// 添加引号
+	str-index(string,substring)			// return substring 在 string 的 index
+	str-insert(string,insert,index)		// 插入 inset 到 string 从 index 开始
+	str-length(string)					// return 长度
+	str-slice(string,start,end)			// 截取字符串
+	to-lower-case(string)				// 小写
+	to-upper-case(string)				// 大写
+	unique-id()							// return 随机字符串 用于 id
+	unquote(string)						// 移除 引号	
+
+Number
+	
+	abs(num)							// 绝对值
+	ceil(num)							// 向上取整
+	comparaable(num1,num2)				// 是否能比较的单位 true|false
+	floor(num)							// 向下取整
+	max(num...)							// return 最大 num
+	min(num...)							// return 最小 num
+	percentage(num)						// 转换 百分比
+	random(num*)						// 指定num:return 1-num 随机整数。 无指定num:return 0-1
+	round(num)							// 四舍五入	
+
+List 									// 列表是不可变的 只能返回新列表
+
+	append(list,value,separator)		// 添加 value 到 list 
+	index(list,value)					// return value 的 index
+	is-bracketed(list)					// 判断 list 是否带中括号
+	join(list1,list2,separator)			// 合并 list2 到 list1，separator 分隔符 
+	length(list)						// return list.length
+	list-separator(list)				// return 分隔符类型 "space" "comma"
+	nth(list,n)							// return list[n]
+	set-nth(list,n,value)				// set list[n] 为 value
+	zip(lists)							// 合并 多个list为一个多维list
+	
+Map
+
+	map-get(map,key)					// return 变量 map 中对应的key的value
+	map-has-key(map,key)				// 检测 是否有 key
+	map-keys(map)						// return 所有 key
+	map-merge(map1,map2)				// 将 map2 添加到 map1
+	map-remove(map,keys...)				// 移除指定 key
+	map-values(map)						// return 所有 value
+
+Selector
+
+	is-superselector(sele1,sele1)		// return sele1 是否包含 sele2
+	selector-append(sele1,seles)		// 连接多个选择器 
+	selector-extend(selector,extendee,extender)
+	selector-nest(seles)				// return 嵌套的选择器
+	selector-parse(selector)			// 将字符串转换为选择器
+	selector-replace(sele,o,re) 		// 更换 sele o 为 re
+	selector-unify(sele1,sele2)			// 合并选择器
+	simple-selectors(sele)				// 拆分选择器
+
+Introspection
+	
+	call(function,arguments...)			// 动态调用函数
+	content-exists()					// 当前混入是否传递 @content
+	feature-exists(feature)				// 检测 是否支持 feature
+	function-exists(func)				// 检测 函数是否存在
+	get-function(func,css:true|false)	// return 纯CSS | func 
+	global-variable-exists(vari)		// 检测 变量是否定义
+	inspect(value)						// 以字符串形式返回 value
+	mixin-exists(mixin)					// 检测 混入是否存在
+	type-of(value)						// return value 类型
+	unit(value)							// return value 单位
+	unitless(value)						// 检测 value是否带单位
+	variable-exists(vari)				// 检测 vari 是否在当前作用域
+
+
+color
+
+	rgb(r,g,b)							// 创建(RGB)
+	rgba(r,g,b,a)						// 创建(RGBA)
+	hsl(h,s,l)							// 创建(HSL)
+	hsla(h,s,l,a)						// 创建(HSLA)
+	grayscale(color)					// return 灰度 
+	complement(color)					// return 补色 180deg
+	invert(color,weight)				// return 反色
+
+	rgba(color,alpha)					// 创建 指定透明度的color
+	lighten(color,amount)				// 创建 提高亮度的color
+	darken(color,amount)				// 创建 降低亮度的color
+	saturate(color,amount)				// 创建 提高透明度的color
+	desaturate(color,amount)			// 创建 降低饱和度的color
+	opacify(color,amount)				// 创建 降低透明度的color
+	fade-in(color,amount)				// 创建 降低透明度的color
+	transparentize(color,amount)		// 创建 提高透明度的color
+	fade-out(color,amount)				// 创建 提升透明度的color
+
+	red(color)							// return r 值
+	green(color)						// return g 值
+	blue(color)							// return b 值
+	hue(color)							// return h 值
+	saturation(color)					// return s 值
+	lightness(color)					// return l 值
+	alpha(color)						// return a 值
+	opacity(color)						// return 透明度
+
+	mix(color1,color2,weight)			// 混色相加 weight表示color1占比
+	adjust-hue(color,degrees)			// 改变色相 degrees(-360deg - 360deg)
+	adjust-color(color,r,g,b,h,s,l,a)	// 相加运算 color 相加给定值
+	change-colir(color,r,g,b,h,s,l,a)	// 替换运算 color 替换给定值
+	scale-color(color,r,g,b,h,s,l,a)	// 百分比加减运算
+
