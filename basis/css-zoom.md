@@ -3,12 +3,13 @@
 [Updated to Mozilla on February 1, 2024](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
 
 - Selectors 选择器
-- Pseudo-elements 伪元素
-- Pseudo-classes 伪类
-- Functions 函数
+- Pseudo elements 伪元素
+- Pseudo classes 伪类
+- CSS Functions 函数
 - Type 数据类型
+- at-rules
 
-## CSS 选择器
+## Selectors 选择器
 
 | Selectors  | description |
 | ---------- | ----------- |
@@ -31,7 +32,7 @@
 | `.ele[attr$="str"]`    | 选择所有 attr 属性值以 "str" 结尾的元素。 |
 | `.ele[attr*="string"]` | 选择所有 attr 属性值包含 "string" 的元素。 |
 
-## CSS 伪元素
+## Pseudo elements 伪元素
 
 | Pseudo-elements | description |
 | --------------- | ----------- |
@@ -54,75 +55,75 @@
 
 | Pseudo-classes | description |
 | -------------- | ----------- |
-  | `:active` | 激活 |
-  | `:hover` | 悬停 |
-  | `:focus` | 焦点 |
-  | `:focus-visible` |  |
-  | `:focus-within` |  |
-  | `:link` | 未被访问的 `<a>`、`<area>` |
-  | `:any-link` | 任何拥有 href 的 `<a>`、`<area>` |
-  | `:visited` | 已被访问的 `<a>`、`<area>` |
-  | `:checked` | 选中的 `<input>` |
-  | `:disabled` | 禁用的 `<input>` |
-  | `:enabled` | 启用的 `<input>` |
-  | `:first` |  |
-  | `:first-child` | 指定元素，在它的父中，作为首个元素的元素 |
-  | `:first-of-type` | 指定元素，在它的同类元素中，作为首个元素的元素 |
-  | `:last-child` |  |
-  | `:last-of-type` |  |
-  | `:only-child` | 指定元素，在它的父中，没有兄弟元素的元素 |
-  | `:only-of-type` | 指定元素，在它的同类元素中，没有兄弟元素的元素 |
-  | `:nth-child(arg)` | 指定元素，在它的父中，匹配参数指定的类型的元素，如 'odd' 奇数、'even' 偶数、 'n' 第 n 个  |
-  | `:nth-of-type(arg)` | 指定元素，在它的同类元素中，匹配参数指定的类型的元素 |
-  | `:nth-last-child()` |  |
-  | `:nth-last-of-type()` |  |
-  | `:autofill` |  |
-  | `:buffering` |  |
-  | `:current` |  |
-  | `:default` |  |
-  | `:defined` |  |
-  | `:dir` |  |
-  | `:empty` | 没有子元素的指定元素 |
-  | `:fullscreen` |  |
-  | `:future` |  |
-  | `:has()` |  |
-  | `:host` |  |
-  | `:host-context()` |  |
-  | `:host()` |  |
-  | `:in-range` |  |
-  | `:indeterminate` |  |
-  | `:invalid` |  |
-  | `:is()` |  |
-  | `:lang(arg)` | 指定元素，匹配参数指定的语言的元素，如 'en-US' |
-  | `:left` |  |
-  | `:local-link` |  |
-  | `:modal` |  |
-  | `:muted` |  |
-  | `:not(arg)` | 指定元素，不匹配指定参数的元素 |
-  | `:optional` |  |
-  | `:out-of-range` |  |
-  | `:past` |  |
-  | `:paused` |  |
-  | `:picture-in-picture` |  |
-  | `:placeholder-show` |  |
-  | `:playing` |  |
-  | `:popover-open` |  |
-  | `:read-only` |  |
-  | `:read-write` |  |
-  | `:required` |  |
-  | `:right` |  |
-  | `:root` | 文本的根元素 |
-  | `:scope` |  |
-  | `:seeking` |  |
-  | `:stalled` |  |
-  | `:target` | id 与当前 URL 片段 # 匹配的元素 |
-  | `:user-invalid` |  |
-  | `:user-valid` |  |
-  | `:valid` |  |
-  | `:volume-locked` |  |
-  | `:where()` |  |
+	| `:active` | 激活 |
+	| `:hover` | 悬停 |
+	| `:focus` | 焦点 |
+	| `:focus-visible` |  |
+	| `:focus-within` |  |
+	| `:link` | 未被访问的 `<a>`、`<area>` |
+	| `:any-link` | 任何拥有 href 的 `<a>`、`<area>` |
+	| `:visited` | 已被访问的 `<a>`、`<area>` |
+	| `:checked` | 选中的 `<input>` |
+	| `:disabled` | 禁用的 `<input>` |
+	| `:enabled` | 启用的 `<input>` |
+	| `:first` |  |
+	| `:first-child` | 指定元素，在它的父中，作为首个元素的元素 |
+	| `:first-of-type` | 指定元素，在它的同类元素中，作为首个元素的元素 |
+	| `:last-child` |  |
+	| `:last-of-type` |  |
+	| `:only-child` | 指定元素，在它的父中，没有兄弟元素的元素 |
+	| `:only-of-type` | 指定元素，在它的同类元素中，没有兄弟元素的元素 |
+	| `:nth-child(arg)` | 指定元素，在它的父中，匹配参数指定的类型的元素，如 'odd' 奇数、'even' 偶数、 'n' 第 n 个  |
+	| `:nth-of-type(arg)` | 指定元素，在它的同类元素中，匹配参数指定的类型的元素 |
+	| `:nth-last-child()` |  |
+	| `:nth-last-of-type()` |  |
+	| `:autofill` |  |
+	| `:buffering` |  |
+	| `:current` |  |
+	| `:default` |  |
+	| `:defined` |  |
+	| `:dir` |  |
+	| `:empty` | 没有子元素的指定元素 |
+	| `:fullscreen` |  |
+	| `:future` |  |
+	| `:has()` |  |
+	| `:host` |  |
+	| `:host-context()` |  |
+	| `:host()` |  |
+	| `:in-range` |  |
+	| `:indeterminate` |  |
+	| `:invalid` |  |
+	| `:is()` |  |
+	| `:lang(arg)` | 指定元素，匹配参数指定的语言的元素，如 'en-US' |
+	| `:left` |  |
+	| `:local-link` |  |
+	| `:modal` |  |
+	| `:muted` |  |
+	| `:not(arg)` | 指定元素，不匹配指定参数的元素 |
+	| `:optional` |  |
+	| `:out-of-range` |  |
+	| `:past` |  |
+	| `:paused` |  |
+	| `:picture-in-picture` |  |
+	| `:placeholder-show` |  |
+	| `:playing` |  |
+	| `:popover-open` |  |
+	| `:read-only` |  |
+	| `:read-write` |  |
+	| `:required` |  |
+	| `:right` |  |
+	| `:root` | 文本的根元素 |
+	| `:scope` |  |
+	| `:seeking` |  |
+	| `:stalled` |  |
+	| `:target` | id 与当前 URL 片段 # 匹配的元素 |
+	| `:user-invalid` |  |
+	| `:user-valid` |  |
+	| `:valid` |  |
+	| `:volume-locked` |  |
+	| `:where()` |  |
 
-## CSS 函数
+## CSS Functions 函数
 
 | Functions | description |
 | -------- | ----------- |
@@ -165,7 +166,7 @@
 | `max()` | 指定最大值 |
 | `min()` | 指定最小值 |
 
-## CSS 数据类型
+## Type 数据类型
 
 **特殊值** 
 
@@ -182,13 +183,13 @@
 
 ```css
 .color {
-  color: rgb()        /* 颜色值 0 ~ 255 | 0 ~ 100% */
-  color: rgba()       /* 不透明度 0 ~ 1  */
-  color: hsl()        /* 色相 0 ~ 360, 饱和度 0 ~ 100%, 亮度 0 ~ 100%  */
-  color: hsla()       /* 不透明度 0 ~ 1  */
-  color: color-mix()  /* 颜色混合  */
-  color: color() 
-  color: hwb() lab() lch() oklab() oklch()
+	color: rgb()        /* 颜色值 0 ~ 255 | 0 ~ 100% */
+	color: rgba()       /* 不透明度 0 ~ 1  */
+	color: hsl()        /* 色相 0 ~ 360, 饱和度 0 ~ 100%, 亮度 0 ~ 100%  */
+	color: hsla()       /* 不透明度 0 ~ 1  */
+	color: color-mix()  /* 颜色混合  */
+	color: color() 
+	color: hwb() lab() lch() oklab() oklch()
 }
 ```
 
@@ -196,11 +197,11 @@
 
 ```css
 .background {
-  background: linear-gradient()           /* 线性渐变 */
-  background: radial-gradient()           /* 径向渐变 */
-  background: repeating-linear-gradient() /* 重复线性渐变 */
-  background: repeating-radial-gradient() /* 重复径向渐变 */
-  background  conic-gradient()            /* 锥形渐变 */
+	background: linear-gradient()           /* 线性渐变 */
+	background: radial-gradient()           /* 径向渐变 */
+	background: repeating-linear-gradient() /* 重复线性渐变 */
+	background: repeating-radial-gradient() /* 重复径向渐变 */
+	background  conic-gradient()            /* 锥形渐变 */
 }
 ```
 
@@ -209,16 +210,81 @@
 ```css
 /* 定义动画周期持续时间变化 */
 .animation {
-  /* 线性函数 liner(<point-list>)  */
-  animation-timing-function: linear;
-  /* 三次贝塞尔函数和关键字 */
-  animation-timing-function: cubic-bezier(<x1>, <y1>, <x2>, <y2>);
-  animation-timing-function: ease ease-in ease-out ease-in-out;
-  /* 阶跃函数和关键字 */
-  animation-timing-function: steps(2, start) step-start step-end;
+	/* 线性函数 liner(<point-list>)  */
+	animation-timing-function: linear;
+	/* 三次贝塞尔函数和关键字 */
+	animation-timing-function: cubic-bezier(<x1>, <y1>, <x2>, <y2>);
+	animation-timing-function: ease ease-in ease-out ease-in-out;
+	/* 阶跃函数和关键字 */
+	animation-timing-function: steps(2, start) step-start step-end;
 }
 /* 定义过渡周期持续时间变化 */
 .transition {
-  transition-timing-function: ;
+	transition-timing-function: ;
 }
 ```
+
+## at-rules
+
+**@media**
+
+	@media screen and (min-width: 900px){ .class { padding: 20px } }
+
+设备类型
+
+- `all` - 所有
+- `print` - 打印
+- `screen` - 屏幕
+- `speech` - 屏幕预览器发声工具，视障
+- `aural` - 语音和音频合成器
+- `braille` - 盲人用点字法触觉回馈设备
+- `embossed` - 分页的盲人用点字法打印机
+- `handheld` - 小的手持的设备
+- `projection` - 方案展示，比如幻灯片
+- `tty` - 使用固定密度字母栅格的媒介，比如电传打字机和终端
+- `tv` - 电视机类型的设备
+
+描述
+
+- `and` - 连接多个设备
+- `not` - 应用于除该设备外所有设备
+- `only` - 只应用于
+
+媒体功能
+
+- `width`
+- `min-width` - 可见区最小宽度
+- `max-width` - 最大宽度
+- `device-width` - 宽度
+- `min-device-width` - 最小宽度
+- `max-device-width` - 最大宽度
+- `height`
+- `device-height` - 高度
+- `max-device-height` - 最大高度
+- `max-height` - 最大高度
+- `min-device-height` - 最小高度
+- `min-height` - 最小高度
+- `aspect-ratio` - 宽高比
+- `device-aspect-ratio` - 宽高比
+- `min-aspect-ratio` - 宽高最小比率
+- `min-device-aspect-ratio` - 宽高最小比率
+- `max-aspect-ratio` - 宽高最大比
+- `max-device-aspect-ratio` - 宽高最大比率
+- `device-pixel-ratio` - 设备像素比
+- `min-device-pixel-ratio`
+- `max-device-pixel-ratio`
+- `max-resolution` - 最大分辨率
+- `min-resolution` - 最小分辨率
+- `resolution` - 分辨率 96 dpi
+- `orientation`
+- `color`
+- `color-index`
+- `max-color`
+- `max-color-index`
+- `min-color`
+- `min-color-index`
+- `max-monochrome`
+- `min-monochrome`
+- `monochrome`
+- `grid`
+- `scan`  
