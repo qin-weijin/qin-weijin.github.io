@@ -9,8 +9,7 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 
-title: My Blog
-description: 我的博客分为项目演示和开发笔记两部分。
+description: 本人正在找前端开发的工作，希望有机会加入你们。
 show_downloads: true
 theme: jekyll-theme-cayman
 
