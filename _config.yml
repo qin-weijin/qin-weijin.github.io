@@ -9,8 +9,8 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 
-title: Development Notes
-description: My Development Notes.
+title: My Blog
+description: 我的博客分为项目演示和开发笔记两部分。
 show_downloads: true
 theme: jekyll-theme-cayman
 
