@@ -48,3 +48,61 @@ export default function MyApp() {
   )
 }
 ```
+
+## Built-in Hook
+
+- `use` - 定义读取资源如 Promise 和上下文值
+- `useState` - 定义状态，定义更新状态函数。
+- `useReducer` - 定义状态，reducer 函数中带更新逻辑的变量。
+- `useContext` - 接收祖先数据。
+- `useRef` - 定义无需渲染的数据，不会重新渲染组件
+- `useImperativeHandle` - 定义从组件中暴露的 Ref
+- `useEffect( () => {} )` - 混入外部代码
+- `useLayoutEffect` - 混入外部代码，在浏览器重新绘制屏幕前执行
+- `useInsertionEffect` -混入外部代码， 在 React 对 DOM 进行更改之前触发
+- `useMemo( () => {} )` - 性能优化，若数据未改变则重用计算结果。
+- `useCallback` - 性能优化
+- `useTransition` - 性能优化，定义为非阻塞，允许其他更新中断。
+- `useDeferredValue` - 性能优化，定义为非关键，允许其他部分先更新。
+- `useDebugValue` 
+- `useId`
+- `useSyncExternalStore` 
+
+## Built-in Components
+
+- `<Fragment>`、`<>...</>` - 定义片段
+- `<Profiler>` - 定义性能分析。
+- `<Suspense>` - 定义子组件加载的后备方案。
+- `<StrictMde>` - 定义仅用于开发环境的检测。
+
+## Built-in API
+
+- `createContext` - 创建 context 提供给子组件 `useContext` 使用。  
+- `forwardRef` - 将 DOM 节点作为 Ref 暴露给父。
+- `lazy` - 懒加载
+- `memo` - props 没有变化时跳过重新渲染。
+- `startTansition` - 定义为非关键的状态更新。
+
+**react-dom**
+
+- `createPortal`
+- `flushSync`
+- `prefetchDNS` - 定义预先加载
+- `preconnect` - 定义预先加载
+- `preload` - 定义预先加载
+- `preloadModule` - 定义预先加载
+- `preinit` - 定义预先加载
+- `preinitModule` - 定义预先加载
+
+**react-dom/client**
+
+- `createRoot` - 创建 React 根节点
+- `hydrateRoot(domNode, reactNode, options?)` - 挂在 React 组件到 Dom 节点。
+
+**react-dom/service**
+
+- `renderToPipeableStream` - 将 React 渲染为 Node.js 流。
+- `renderToStaticNodeStream` - 将非交互 React 渲染为 Node.js 流。
+- `renderToReadableStream` - 将 React 渲染为 web 流。
+- `renderToString` - 将 React 渲染为字符串。
+- `renderToStaticMarkup` - 将非交互式 React 渲染为字符串。
