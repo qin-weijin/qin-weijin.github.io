@@ -129,3 +129,34 @@ return (
 **反馈**
 
 **其他**
+
+## Ant Design Vue
+
+    $ cnpm install ant-design-vue@4.x --save
+
+**自动按需引入**
+
+    $ cnpm install unplugin-vue-components -D
+
+vite.config.js
+
+```
+import { defineConfig } from 'vite';
+import Components from 'unplugin-vue-components/vite';
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
+export default defineConfig({
+  plugins: [
+    // ...
+    Components({
+      resolvers: [
+        AntDesignVueResolver({
+          importStyle: false, // css in js
+        }),
+      ],
+    }),
+  ],
+});    
+```
+**图标组件包**
+
+    npm install --save @ant-design/icons-vue    

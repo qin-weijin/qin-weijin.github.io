@@ -1,5 +1,7 @@
 # [React](https://react.docschina.org/learn)
 
+    $ npm install react react-dom
+
 ## 基本语法
 
 React 组件必须以大写字母开头。
@@ -73,7 +75,7 @@ export default function MyApp() {
 - `<Fragment>`、`<>...</>` - 定义片段
 - `<Profiler>` - 定义性能分析。
 - `<Suspense>` - 定义子组件加载的后备方案。
-- `<StrictMde>` - 定义仅用于开发环境的检测。
+- `<React.StrictMode>` - 定义仅用于开发环境的检测。
 
 ## Built-in API
 
@@ -96,8 +98,17 @@ export default function MyApp() {
 
 **react-dom/client**
 
-- `createRoot` - 创建 React 根节点
-- `hydrateRoot(domNode, reactNode, options?)` - 挂在 React 组件到 Dom 节点。
+```
+import {createRoot, hydrateRoot} from 'react-dom/client'
+
+const domNode = document.getElementById('root');            - 获取预览器节点
+const root = createRoot(domNode, options?)                  - 绑定预览器节点
+const hydrateRoot = hydrateRoot(domNode, reactNode);        - 将 react-dom/server 创建的 React 挂载到预览器节点
+
+root.render(reactNode)                                      - 挂载 React Node
+root.unmount()                                              - 销毁 React Node
+
+```
 
 **react-dom/service**
 
