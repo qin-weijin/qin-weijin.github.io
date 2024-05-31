@@ -1,0 +1,52 @@
+[
+  {
+    "title": "gd-government",
+    "id": "gd_government",
+    "description": "本例使用 Vuetify 重构了“广东政务服务网”",
+    "src": [
+      "project/gd-government_1.jpeg", 
+      "project/gd-government_2.jpeg", 
+      "project/gd-government_3.jpeg"
+    ],
+    "href": "https://qin-weijin.github.io/gd-government/"
+  },
+  {
+    "title": "pinia-axios-login",
+    "id": "pinia-axios-login",
+    "description": "本例使用 pinia 进行状态管理，使用 axios 和 mockjs 模拟服务器数据，并通过 Vue Router Guard 实现登录功能。",
+    "src": ["project/pinia-axios-login.jpeg"],
+    "href": "https://qin-weijin.github.io/login-demo/"
+  },
+  {
+    "title": "markdown-jekyll-blog",
+    "id": "markdown_jekyll_blog",
+    "description": "本例通过 jekyll 和 markdown 构建个人博客，并上传展示到 GitHub Page",
+    "src": [
+      "project/markdown-jekyll-bio_1.jpeg", 
+      "project/markdown-jekyll-bio_2.jpeg",
+      "project/markdown-jekyll-bio_3.jpeg"
+    ],
+    "href": "https://qin-weijin.github.io/notes/"
+  },
+  {
+    "title": "vutify-source-analysis",
+    "id": "vutify_source_analysis",
+    "description": "本例对 Vue 流行 UI 库 Vuetify 的源码进行解构和分析。",
+    "src": ["project/pinia-axios-login.jpeg"],
+    "href": "./"
+  },
+  {
+    "title": "video-swiper-douyin",
+    "id": "videojs_swiper_douyin",
+    "description": "本例通过 videojs 和 swiper 实现抖音功能。",
+    "src": ["project/video-swiper-douyin.jpeg"],
+    "href": "./"
+  },
+  {
+    "title": "vue-vutify-taobao",
+    "id": "vue_vutify_taobao",
+    "description": "本例模拟“淘宝网”构建购物类网站。",
+    "src": ["project/video-swiper-douyin.jpeg"],
+    "href": "./"
+  }
+]
